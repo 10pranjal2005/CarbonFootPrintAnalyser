@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Carbon Wise</title>
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+
+
+    <!-- ADD THIS DIV FOR THE ANIMATION CANVAS -->
+    <div id="particles-js"></div>
+
+    <header class="main-header">
+        <div class="logo-container">
+    <img src="images/logo.jpg" alt="Carbon Wise Logo" class="logo-image">
+    <div class="logo-text">
+        <div class="logo">CARBONWISE</div>
+<!-- THE FIX IS HERE: The tagline is now split into two spans -->
+<div class="tagline">
+    <span class="gradient-tag">Know Your Impact.</span> <span class="gradient-tag">Act Wisely.</span>
+</div>    </div>
+</div>
+        
+    </header>
+
+    <main class="container centered-content">
+        <div class="form-container">
+            <h1 class="gradient-text">Create Your Account</h1>
+            <form action="calculator.html">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+            <p class="form-switch">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </main>
+
+<footer class="main-footer">
+    <p class="footer-text">© 2025 Carbon Wise | All rights reserved</p>
+</footer>
+</body>
+</html>

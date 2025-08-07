@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Carbon Wise</title>
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header class="main-header">
+        <div class="logo-container">
+    <img src="images/logo.jpg" alt="Carbon Wise Logo" class="logo-image">
+    <div class="logo-text">
+        <div class="logo">CARBONWISE</div>
+<!-- THE FIX IS HERE: The tagline is now split into two spans -->
+<div class="tagline">
+    <span class="gradient-tag">Know Your Impact.</span> <span class="gradient-tag">Act Wisely.</span>
+</div>    </div>
+</div>
+        <nav>
+    <a href="about.html">About</a> |
+    <a href="calculator.html">Calculator</a> |
+    <a href="results.html">My Report</a> |
+    <a href="green-shift.html">Green Shift</a> |
+    <a href="credits.html">Credits</a> |
+    <a href="index.html">Logout</a>
+</nav>
+    </header>
+
+    <main class="container">
+        <div class="intro-section">
+            <h1 class="gradient-text"><b>Quarterly Data Entry</h1>
+            <p> <b>Fill your consumption for a 3 month period</p>
+            <div class="form-group quarter-group">
+                <label for="quarter"> <b> Set Quarter: </b></label>
+                <select id="quarter" name="quarter" required>
+                    <option value="1">Quarter 1 (Jan-Mar)</option>
+                    <option value="2">Quarter 2 (Apr-Jun)</option>
+                    <option value="3">Quarter 3 (Jul-Sep)</option>
+                    <option value="4">Quarter 4 (Oct-Dec)</option>
+                </select>
+            </div>
+        </div>
+
+        <form id="footprintForm">
+            <div class="sections-grid">
+                <div class="section-card" id="card-energy-section" data-target="energy-section"><h2>HOUSEHOLD ENERGY</h2></div>
+                <fieldset id="energy-section" class="form-section">
+                    <div class="form-group"><label for="electricity">Electricity Usage (kWh):</label><input type="number" id="electricity" name="electricity" required min="0" value="0"></div>
+                    <div class="form-group"><label for="naturalGas">Natural Gas Usage (therms):</label><input type="number" id="naturalGas" name="naturalGas" required min="0" value="0"></div>
+                    <div class="form-group"><label for="lpgCylinders">LPG Cylinder Usage (14.2kg cylinders):</label><input type="number" id="lpgCylinders" name="lpgCylinders" required min="0" value="0"></div>
+                    <div class="form-group"><label for="waterHeating">Water Heating (Electric geyser, kWh/month):</label><input type="number" id="waterHeating" name="waterHeating" required min="0" value="0"></div>
+                    <button type="button" class="next-btn" data-next="card-transport-section">Next →</button>
+                </fieldset>
+                <div class="section-card" id="card-transport-section" data-target="transport-section"><h2>TRANSPORTATION</h2></div>
+                <fieldset id="transport-section" class="form-section">
+                    <div class="form-group"><label for="gasoline">Gasoline Usage (litres):</label><input type="number" id="gasoline" name="gasoline" required min="0" value="0"></div>
+                    <div class="form-group"><label for="flightsShort">Flights - Short haul (≤3 hours):</label><input type="number" id="flightsShort" name="flightsShort" required min="0" value="0"></div>
+                    <div class="form-group"><label for="flightsLong">Flights - Long haul (>3 hours):</label><input type="number" id="flightsLong" name="flightsLong" required min="0" value="0"></div>
+                    <div class="form-group"><label for="publicTransport">Public Transport (Bus/Rail, km):</label><input type="number" id="publicTransport" name="publicTransport" required min="0" value="0"></div>
+                    <div class="form-group"><label for="taxi">Taxi/Rideshare (Uber/Ola, km):</label><input type="number" id="taxi" name="taxi" required min="0" value="0"></div>
+                    <div class="form-group"><label for="twoWheeler">Two-Wheeler Model:</label><select id="twoWheeler" name="twoWheeler"><option value="none">None</option><optgroup label="Hero"><option value="hero_splendor">Splendor Plus</option><option value="hero_hf_deluxe">HF Deluxe</option><option value="hero_passion">Passion Pro</option><option value="hero_glamour">Glamour</option><option value="hero_xpulse">XPulse 200</option></optgroup><optgroup label="Honda"><option value="honda_activa">Activa 6G</option><option value="honda_shine">Shine</option><option value="honda_dio">Dio</option><option value="honda_unicorn">Unicorn</option><option value="honda_hornet">Hornet 2.0</option></optgroup><optgroup label="TVS"><option value="tvs_jupiter">Jupiter</option><option value="tvs_apache">Apache RTR 160</option><option value="tvs_raider">Raider 125</option><option value="tvs_ntorq">NTORQ 125</option><option value="tvs_iqube">iQube (EV)</option></optgroup><optgroup label="Bajaj"><option value="bajaj_pulsar">Pulsar 150</option><option value="bajaj_platina">Platina 100</option><option value="bajaj_chetak">Chetak (EV)</option><option value="bajaj_dominar">Dominar 400</option></optgroup><optgroup label="Royal Enfield"><option value="re_classic">Classic 350</option><option value="re_bullet">Bullet 350</option><option value="re_himalayan">Himalayan</option></optgroup><optgroup label="EV"><option value="ather_450x">Ather 450X</option><option value="ola_s1">Ola S1 Pro</option></optgroup></select></div>
+                    <div class="form-group"><label for="fourWheeler">Four-Wheeler Model:</label><select id="fourWheeler" name="fourWheeler"><option value="none">None</option><optgroup label="Maruti Suzuki"><option value="ms_swift">Swift (P)</option><option value="ms_baleno">Baleno (P)</option><option value="ms_dzire">Dzire (P)</option><option value="ms_brezza">Brezza (P)</option><option value="ms_ertiga">Ertiga (P)</option></optgroup><optgroup label="Hyundai"><option value="hy_creta_d">Creta (D)</option><option value="hy_venue_p">Venue (P)</option><option value="hy_i20">i20 (P)</option><option value="hy_verna">Verna (P)</option></optgroup><optgroup label="Tata"><option value="tata_nexon_p">Nexon (P)</option><option value="tata_punch">Punch (P)</option><option value="tata_harrier">Harrier (D)</option><option value="tata_nexon_ev">Nexon EV</option><option value="tata_tiago_ev">Tiago EV</option></optgroup><optgroup label="Mahindra"><option value="ma_xuv700_d">XUV700 (D)</option><option value="ma_scorpio">Scorpio-N (D)</option><option value="ma_thar">Thar (D)</option></optgroup><optgroup label="Kia"><option value="kia_seltos_d">Seltos (D)</option><option value="kia_sonet_p">Sonet (P)</option></optgroup><optgroup label="Toyota"><option value="to_innova">Innova Crysta (D)</option><option value="to_fortuner">Fortuner (D)</option></optgroup></select></div>
+                    <button type="button" class="next-btn" data-next="card-food-section">Next →</button>
+                </fieldset>
+                <div class="section-card" id="card-food-section" data-target="food-section"><h2>FOOD & DIET</h2></div>
+                <fieldset id="food-section" class="form-section">
+                    <div class="form-group"><label for="meat">Meat Consumption (kg):</label><input type="number" id="meat" name="meat" required min="0" value="0"></div>
+                    <div class="form-group"><label for="dairy">Dairy Consumption (kg/month):</label><input type="number" id="dairy" name="dairy" required min="0" value="0"></div>
+                    <div class="form-group"><label for="vegetarianMonths">Vegetarian Diet (months, 0-3):</label><input type="number" id="vegetarianMonths" name="vegetarianMonths" required min="0" max="3" value="0"></div>
+                    <div class="form-group"><label for="veganMonths">Vegan Diet (months, 0-3):</label><input type="number" id="veganMonths" name="veganMonths" required min="0" max="3" value="0"></div>
+                     <button type="button" class="next-btn" data-next="card-lifestyle-section">Next →</button>
+                </fieldset>
+                <div class="section-card" id="card-lifestyle-section" data-target="lifestyle-section"><h2>LIFESTYLE & CONSUMPTION</h2></div>
+                <fieldset id="lifestyle-section" class="form-section">
+                    <div class="form-group"><label for="waste">Waste Generated (kg):</label><input type="number" id="waste" name="waste" required min="0" value="0"></div>
+                    <div class="form-group"><label for="eWaste">E-Waste Disposal (unrecycled, kg/year):</label><input type="number" id="eWaste" name="eWaste" required min="0" value="0"></div>
+                    <div class="form-group"><label for="clothes">New Clothes Purchased (items):</label><input type="number" id="clothes" name="clothes" required min="0" value="0"></div>
+                    <div class="form-group"><label for="bottledWater">Bottled Water (litres):</label><input type="number" id="bottledWater" name="bottledWater" required min="0" value="0"></div>
+                    <button type="button" class="next-btn" data-next="card-digital-section">Next →</button>
+                </fieldset>
+                <div class="section-card" id="card-digital-section" data-target="digital-section"><h2>DIGITAL HABITS</h2></div>
+                <fieldset id="digital-section" class="form-section">
+                    <div class="form-group"><label for="streaming">Streaming HD Video (hours):</label><input type="number" id="streaming" name="streaming" required min="0" value="0"></div>
+                    <div class="form-group"><label for="cloudStorage">Cloud Storage Usage (GB/month):</label><input type="number" id="cloudStorage" name="cloudStorage" required min="0" value="0"></div>
+                    <div class="form-group"><label for="mobile">Primary Mobile Model:</label><select id="mobile" name="mobile"><option value="none">None</option><optgroup label="Apple"><option value="apple_iphone_15_pro">iPhone 15 Pro</option><option value="apple_iphone_15">iPhone 15</option><option value="apple_iphone_se">iPhone SE</option></optgroup><optgroup label="Samsung"><option value="samsung_s24_ultra">Galaxy S24 Ultra</option><option value="samsung_s24">Galaxy S24</option><option value="samsung_z_fold5">Galaxy Z Fold 5</option><option value="samsung_a55">Galaxy A55</option><option value="samsung_m34">Galaxy M34</option></optgroup><optgroup label="Google"><option value="google_pixel_8_pro">Pixel 8 Pro</option><option value="google_pixel_8">Pixel 8</option><option value="google_pixel_7a">Pixel 7a</option></optgroup><optgroup label="OnePlus"><option value="oneplus_12">OnePlus 12</option><option value="oneplus_12r">OnePlus 12R</option><option value="oneplus_nord_ce4">OnePlus Nord CE 4</option></optgroup><optgroup label="Xiaomi/Redmi/POCO"><option value="xiaomi_14">Xiaomi 14</option><option value="redmi_note_13_pro">Redmi Note 13 Pro</option><option value="poco_x6_pro">POCO X6 Pro</option></optgroup></select></div>
+                    <div class="form-group"><label for="laptop">Primary Laptop Model:</label><select id="laptop" name="laptop"><option value="none">None</option><optgroup label="Apple"><option value="apple_macbook_air_m3">MacBook Air M3</option><option value="apple_macbook_pro_14">MacBook Pro 14"</option></optgroup><optgroup label="Dell"><option value="dell_xps_15">XPS 15</option><option value="dell_inspiron_15">Inspiron 15</option><option value="dell_alienware_m16">Alienware m16 (Gaming)</option></optgroup><optgroup label="HP"><option value="hp_spectre_x360">Spectre x360</option><option value="hp_pavilion_15">Pavilion 15</option><option value="hp_victus">Victus (Gaming)</option></optgroup><optgroup label="Lenovo"><option value="lenovo_yoga_slim">Yoga Slim 7i</option><option value="lenovo_ideapad_3">IdeaPad Slim 3</option><option value="lenovo_legion">Legion (Gaming)</option></optgroup><optgroup label="Asus"><option value="asus_zenbook_14">Zenbook 14 OLED</option><option value="asus_vivobook_15">Vivobook 15</option><option value="asus_rog_strix">ROG Strix (Gaming)</option></optgroup></select></div>
+                    <button type="button" class="next-btn" data-next="card-home-section">Next →</button>
+                </fieldset>
+                <div class="section-card" id="card-home-section" data-target="home-section"><h2>HOME SIZE & OCCUPANCY</h2></div>
+                <fieldset id="home-section" class="form-section">
+                    <div class="form-group"><label for="region">Region in India:</label><select id="region" name="region"><option value="delhi_ncr">Delhi NCR</option><option value="mumbai_mmr">Mumbai MMR</option><option value="bangalore">Bangalore</option><option value="chennai">Chennai</option><option value="kolkata">Kolkata</option><option value="uttar_pradesh">Uttar Pradesh</option><option value="himachal_pradesh">Himachal Pradesh</option></select></div>
+                    <div class="form-group"><label for="homeSize">Home Size (sq. ft):</label><input type="number" id="homeSize" name="homeSize" required min="0" value="0"></div>
+                     <button type="button" class="next-btn">Finish</button>
+                </fieldset>
+            </div>
+            <div class="submission-area"><button type="submit" class="btn-primary">Submit Quarterly Footprint</button><div id="quarterlyResult" class="result-box"></div></div>
+        </form>
+        <h2 class="gradient-text annual-heading">Annual Summary</h2>
+        <div class="annual-summary-box"><button id="getAnnualResult" class="btn-primary">Calculate Annual Footprint</button><div id="annualResult" class="result-box"></div></div>
+    </main>
+<footer class="main-footer">
+    <p class="footer-text">© 2025 Carbon Wise | All rights reserved</p>
+</footer>    <script src="js/script.js"></script>
+</body>
+</html>

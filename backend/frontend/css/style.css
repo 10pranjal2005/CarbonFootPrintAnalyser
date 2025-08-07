@@ -1,0 +1,224 @@
+/* --- Import Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* --- Keyframes for Fade-in Animation --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* General Body Styling */
+body {
+    background-color: #000;
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Footer Styling */
+.main-header, .main-footer {
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #0d3b66, #00c9b7);
+    color: #fff;
+    flex-shrink: 0;
+}
+.main-header { display: flex; justify-content: space-between; align-items: center; }
+.main-footer { text-align: center; margin-top: auto; }
+.footer-text { font-weight: bold; }
+
+/* Logo & Tagline Styling */
+.logo-container { display: flex; align-items: center; }
+.logo-image { height: 50px; width: 50px; margin-right: 15px; border-radius: 50%; }
+.logo-text { display: flex; flex-direction: column; }
+.logo { font-size: 1.8rem; font-weight: bold; background: linear-gradient(90deg, #00c9b7, #f4d35e); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.tagline { font-size: 1rem; font-weight: bold; margin-top: -5px; }
+.tagline .gradient-tag { background: linear-gradient(90deg, #00c9b7, #f4d35e); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.main-header nav a { color: #fff; text-decoration: none; margin: 0 1rem; font-size: 1rem; font-weight: bold; transition: color 0.3s; }
+.main-header nav a:hover { color: #f4d35e; }
+
+/* Main Container & Layouts */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    animation: fadeInUp 0.8s ease-in-out;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+.centered-content { text-align: center; }
+.centered-content p { font-size: 1.2rem; line-height: 1.8; max-width: 700px; margin: 1.5rem auto; text-align: justify; color: #ccc; }
+.landing-text { text-align: center !important; }
+
+/* Call-to-Action Buttons (for index.html) */
+.cta-buttons { margin-top: 2rem; }
+.btn-primary { background: linear-gradient(90deg, #0d3b66, #00c9b7); color: #fff; border: none; padding: 1rem 2rem; font-size: 1rem; font-weight: bold; cursor: pointer; transition: opacity 0.3s; border-radius: 5px; text-decoration: none; }
+.btn-primary:hover { opacity: 0.9; }
+.btn-secondary { background: transparent; border: 1px solid #00c9b7; color: #00c9b7; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; margin-left: 1rem; transition: all 0.3s;}
+.btn-secondary:hover { background: #00c9b7; color: #000; }
+
+/* Login/Signup Form Container */
+.form-container { max-width: 400px; margin: 2rem auto; padding: 2rem; background-color: #1a1a1a; border: 1px solid #444; }
+.form-container .form-group { text-align: left; }
+.form-switch { margin-top: 1.5rem; }
+.form-switch a { color: #00c9b7; text-decoration: none; }
+
+/* Calculator Specific Styles */
+.intro-section { text-align: center; margin-bottom: 2rem; }
+.quarter-group label { font-size: 1.25rem; }
+.gradient-text { font-size: 2.5rem; margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #00c9b7, #f4d35e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.sub-heading { color: #00c9b7; display: inline-block; border-bottom: 2px solid #00c9b7; padding-bottom: 0.5rem; margin-top: 2rem; }
+.sections-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+.section-card { background: linear-gradient(135deg, #2a0a4a, #0b2e4e); border: 2px solid #00c9b7; padding: 2.5rem 2rem; text-align: center; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+.section-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0, 201, 183, 0.5); }
+.section-card h2 { margin: 0; color: #00c9b7; }
+.form-section { display: none; grid-column: 1 / -1; border: 1px solid #444; padding: 1.5rem; margin-top: 1rem; background-color: #111; position: relative; }
+.form-section.visible { display: block; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: #00c9b7; }
+input, select { font-family: 'Montserrat', sans-serif; }
+input[type="number"], input[type="email"], input[type="password"], input[type="text"], select { width: 100%; padding: 0.8rem; background-color: #333; border: 1px solid #555; color: #fff; border-radius: 4px; box-sizing: border-box; }
+.next-btn { background: linear-gradient(90deg, #0d3b66, #00c9b7); color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-weight: bold; float: right; margin-top: 1rem; transition: opacity 0.3s; }
+.next-btn:hover { opacity: 0.9; }
+.submission-area, .annual-summary-box { text-align: center; padding: 2rem; background-color: #1a1a1a; border: 1px solid #444; }
+.submission-area { margin-top: 2rem; }
+.annual-heading { text-align: center; margin-top: 3rem; }
+.result-box { margin-top: 1.5rem; padding: 1rem; background-color: #0d3b66; color: #fff; font-size: 1.2rem; font-weight: bold; min-height: 25px; border-radius: 5px; }
+
+/* Results Page Styles */
+.tips-section { margin-top: 3rem; text-align: center; }
+.tips-section ul { list-style-type: none; padding: 0; max-width: 600px; margin: 1rem auto; text-align: left; }
+.tips-section li { background-color: #1a1a1a; border-left: 4px solid #00c9b7; margin-bottom: 0.5rem; padding: 1rem; }
+.chart-container { background-color: #1a1a1a; padding: 2rem; border: 1px solid #444; border-radius: 8px; margin-top: 2rem; }
+.download-section { text-align: center; margin-top: 2rem; }
+
+/* Animated Particle Background */
+#particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+
+/* --- STYLES for green-shift.html --- */
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.recommendation-card {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    border-left: 5px solid #00c9b7;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.recommendation-card h3 {
+    margin-top: 0;
+    color: #00c9b7;
+}
+.recommendation-card p {
+    color: #ccc;
+    line-height: 1.6;
+    flex-grow: 1; /* This pushes the meta section to the bottom */
+}
+.recommendation-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+.savings-estimate {
+    color: #f4d35e;
+}
+.difficulty-tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+.difficulty-tag.easy { background-color: #2e7d32; color: #fff; }
+.difficulty-tag.medium { background-color: #ed6c02; color: #fff; }
+/* --- THE FIX IS HERE: Corrected the closing brace --- */
+.difficulty-tag.hard { background-color: #d32f2f; color: #fff; }
+/* --- NEW: Styling for the Credits Page --- */
+.credits-section {
+    margin-bottom: 3rem;
+}
+
+.credits-section h2 {
+    color: #00c9b7;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.team-member-card {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 1100px; /* Wider to accommodate more text */
+    margin: 1.5rem auto; /* Centered with space between cards */
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the photo circular */
+    object-fit: cover; /* Prevents image stretching */
+    border: 3px solid #00c9b7;
+    margin-right: 2rem;
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-info h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.member-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.member-info li {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.member-info li strong {
+    color: #00c9b7;
+    display: inline-block;
+    width: 150px; /* Aligns the list items neatly */
+}
+
+.member-info a {
+    color: #f4d35e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.member-info a:hover {
+    color: #fff;
+}
+
+.member-message {
+    font-style: italic;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #444;
+    color: #aaa;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Shift Plan - Carbon Wise</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Carbon Wise Logo" class="logo-image">
+            <div class="logo-text">
+                <div class="logo">CARBONWISE</div>
+                <div class="tagline"><span class="gradient-tag">Know Your Impact.</span> <span class="gradient-tag">Act Wisely.</span></div>
+            </div>
+        </div>
+<nav>
+    <a href="about.html">About</a> |
+    <a href="calculator.html">Calculator</a> |
+    <a href="results.html">My Report</a> |
+    <a href="green-shift.html">Green Shift</a> |
+    <a href="credits.html">Credits</a> |
+    <a href="index.html">Logout</a>
+</nav>
+    </header>
+
+    <main class="container">
+        <div class="intro-section">
+            <h1 class="gradient-text">Your Green Shift Plan</h1>
+            <p class="landing-text">Here are personalized, actionable steps to reduce your footprint based on your latest data.</p>
+        </div>
+
+        <!-- THE FIX IS HERE: Added a new parent container for the grid -->
+        <div class="recommendations-grid">
+            <div class="recommendation-card">
+                <h3>Energy Consumption</h3>
+                <p>Switch to LED lighting for all your bulbs.</p>
+                <div class="recommendation-meta">
+                    <span class="savings-estimate">~150 kg CO₂/year savings</span>
+                    <span class="difficulty-tag easy">Easy</span>
+                </div>
+            </div>
+
+            <div class="recommendation-card">
+                <h3>Energy Consumption</h3>
+                <p>Install a smart thermostat to optimize heating and cooling.</p>
+                <div class="recommendation-meta">
+                    <span class="savings-estimate">~250 kg CO₂/year savings</span>
+                    <span class="difficulty-tag medium">Medium</span>
+                </div>
+            </div>
+            
+            <div class="recommendation-card">
+                <h3>Transportation</h3>
+                <p>Replace short car trips (<5 km) with biking or walking.</p>
+                <div class="recommendation-meta">
+                    <span class="savings-estimate">~100 kg CO₂/year savings</span>
+                    <span class="difficulty-tag easy">Easy</span>
+                </div>
+            </div>
+
+            <div class="recommendation-card">
+                <h3>Food & Diet</h3>
+                <p>Adopt a meat-free diet for two days a week.</p>
+                <div class="recommendation-meta">
+                    <span class="savings-estimate">~300 kg CO₂/year savings</span>
+                    <span class="difficulty-tag hard">Hard</span>
+                </div>
+            </div>
+        </div>
+        <!-- END OF FIX -->
+
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 Carbon Wise | All rights reserved</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
